@@ -5,6 +5,8 @@ Create UIView constraints based on a template.
 The concept behind this library is to allow creating "templates" of Auto Layout constraints and applying them
 to views when needed (with or without animation). This is a nice way to keep all Auto Layout definitions in your storyboard or nib file.
 
+__DISCLAIMER__: This library references by name a private class named `NSContentSizeLayoutConstraint` (which we filter out when we copy the constraints from the template). I am in the process of submitting an app to the App Store with this library. Once I have evidence if this will cause a reject, I will update.
+
 ## Usage (by example)
 
 A common example would be to use CLAutoLayoutTemplates to animate a frame changes for a view. 
@@ -41,4 +43,4 @@ Elad Ben-Israel, elad.benisrael@gmail.com
 
 ## License
 
-AutoLayoutTemplates is available under the MIT license. See the LICENSE file for more info.
+CLAutoLayoutTemplates is available under the MIT license. See the LICENSE file for more info.
