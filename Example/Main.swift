@@ -13,15 +13,18 @@ import UIKit
 }
 
 class ViewController: UIViewController {
-    
     @IBOutlet private var button: UIButton!
     @IBOutlet private var templateView: UIView!
-    
     @IBAction private func clickMe() {
-        UIView.animateWithDuration(0.25) {
-            self.view.replaceConstraintsForItem(self.button, usingTemplate: self.templateView)
-            self.view.layoutIfNeeded()
-        }
+        UIView.animateWithDuration(0.4,
+            delay: 0.0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0,
+            options: UIViewAnimationOptions(0),
+            animations: {
+                self.view.replaceConstraintsForItem(self.button, usingTemplate: self.templateView)
+                self.view.layoutIfNeeded()
+            },
+            completion: nil)
     }
 }
-

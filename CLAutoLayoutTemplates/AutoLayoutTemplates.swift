@@ -9,6 +9,8 @@ import UIKit
 
 extension UIView {
     func replaceConstraintsForItem(targetItem: AnyObject, usingTemplate templateItem: AnyObject) {
+        assert(targetItem.superview === templateItem.superview, "target and template must share a superview")
+        
         // depth first
         for subview in self.subviews {
             subview.replaceConstraintsForItem(targetItem, usingTemplate: templateItem)
