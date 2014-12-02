@@ -1,22 +1,37 @@
-# AutoLayoutTemplates
+# CLAutoLayoutTemplates
 
-[![CI Status](http://img.shields.io/travis/Elad Ben-Israel/AutoLayoutTemplates.svg?style=flat)](https://travis-ci.org/Elad Ben-Israel/AutoLayoutTemplates)
-[![Version](https://img.shields.io/cocoapods/v/AutoLayoutTemplates.svg?style=flat)](http://cocoadocs.org/docsets/AutoLayoutTemplates)
-[![License](https://img.shields.io/cocoapods/l/AutoLayoutTemplates.svg?style=flat)](http://cocoadocs.org/docsets/AutoLayoutTemplates)
-[![Platform](https://img.shields.io/cocoapods/p/AutoLayoutTemplates.svg?style=flat)](http://cocoadocs.org/docsets/AutoLayoutTemplates)
+The concept behind this library is to allow creating "templates" of Auto Layout constraints and applying them
+to views when needed (with or without animation). This is a nice way to keep all Auto Layout definitions in your storyboard or nib file.
 
-## Usage
+## Usage (by example)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+A common example would be to use CLAutoLayoutTemplates to animate a frame changes for a view. 
 
-## Requirements
+For example, say you have a button `myButton` with an initial position declared using Auto Layout and you want the button to move to a different position, which you would also want to declare using Auto Layout.
+
+With CLAutoLayoutTemplates, you can create a second hidden `UIView` and define the approperiate constraints for it in Interface Builder. This hidden view will be `templateView`.
+
+Then, when you want to move the button:
+
+```swift
+func moveButton() {
+  UIView.animateWithDuration(0.25) {
+    self.view.replaceConstraintsForItem(self.myButton, usingTemplate:self.templateView)
+    self.view.layoutIfNeeded()
+  }
+}
+```
+
+CLAutoLayoutTemplates will replace `myButton`'s constraints with new constraints based on all the constraints defined for `templateView`. As you see, we placed this within an animation block, but that's optional of course.
+
+How awesome is that?
 
 ## Installation
 
-AutoLayoutTemplates is available through [CocoaPods](http://cocoapods.org). To install
+CLAutoLayoutTemplates is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod "AutoLayoutTemplates"
+    pod "CLAutoLayoutTemplates"
 
 ## Author
 
@@ -25,4 +40,3 @@ Elad Ben-Israel, elad.benisrael@gmail.com
 ## License
 
 AutoLayoutTemplates is available under the MIT license. See the LICENSE file for more info.
-
