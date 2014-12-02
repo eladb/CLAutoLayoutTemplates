@@ -1,5 +1,7 @@
 # CLAutoLayoutTemplates
 
+Create UIView constraints based on a template.
+
 The concept behind this library is to allow creating "templates" of Auto Layout constraints and applying them
 to views when needed (with or without animation). This is a nice way to keep all Auto Layout definitions in your storyboard or nib file.
 
