@@ -1,0 +1,14 @@
+PODS:
+  - CLAutoLayoutTemplates (0.1.0)
+
+DEPENDENCIES:
+  - CLAutoLayoutTemplates (from `../CLAutoLayoutTemplates.podspec`)
+
+EXTERNAL SOURCES:
+  CLAutoLayoutTemplates:
+    :path: ../CLAutoLayoutTemplates.podspec
+
+SPEC CHECKSUMS:
+  CLAutoLayoutTemplates: 1aecef5595e3195cf6f8cd68f45533c34c10f453
+
+COCOAPODS: 0.35.0

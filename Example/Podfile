@@ -1,0 +1,1 @@
+pod "CLAutoLayoutTemplates", :path => "../CLAutoLayoutTemplates.podspec"

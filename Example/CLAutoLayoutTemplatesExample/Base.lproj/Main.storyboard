@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C68m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5qt-MR-Jph">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="In3-PA-DMA">
+            <objects>
+                <viewController id="5qt-MR-Jph" customClass="ViewController" customModule="CLAutoLayoutTemplatesExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XdQ-sR-pjh"/>
+                        <viewControllerLayoutGuide type="bottom" id="WUZ-W9-Is0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gaj-M4-iQa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tek-xL-Lbx">
+                                <rect key="frame" x="116" y="254" width="88" height="59"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Mdz-nw-1Ze"/>
+                                    <constraint firstAttribute="height" constant="59" id="isQ-2z-Jr2"/>
+                                </constraints>
+                                <state key="normal" title="Click Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickMe" destination="5qt-MR-Jph" eventType="touchUpInside" id="Vu8-eW-W3K"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-mk-eMn" userLabel="Template">
+                                <rect key="frame" x="39" y="28" width="242" height="118"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="GYI-PP-0Pt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="tek-xL-Lbx" secondAttribute="centerX" id="A6S-xk-AxJ"/>
+                            <constraint firstItem="Zmx-mk-eMn" firstAttribute="top" secondItem="XdQ-sR-pjh" secondAttribute="bottom" constant="8" id="EhI-qi-mFi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zmx-mk-eMn" secondAttribute="trailing" constant="23" id="OLQ-m5-Msu"/>
+                            <constraint firstAttribute="centerY" secondItem="tek-xL-Lbx" secondAttribute="centerY" id="kge-yL-X35"/>
+                            <constraint firstItem="Zmx-mk-eMn" firstAttribute="leading" secondItem="Gaj-M4-iQa" secondAttribute="leadingMargin" constant="23" id="lOp-ay-RUS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="tek-xL-Lbx" id="c9r-vm-UXy"/>
+                        <outlet property="templateView" destination="Zmx-mk-eMn" id="sMa-D5-6js"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5i-cg-Q6Z" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

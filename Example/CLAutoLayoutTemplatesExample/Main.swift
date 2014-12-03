@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet private var button: UIButton!
     @IBOutlet private var templateView: UIView!
     @IBAction private func clickMe() {
-        UIView.animateWithDuration(0.4,
+        UIView.animateWithDuration(0.5,
             delay: 0.0,
             usingSpringWithDamping: 0.5,
             initialSpringVelocity: 0,
